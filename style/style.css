@@ -239,6 +239,13 @@ body {
   transition: transform 0.3s ease;
 }
 
+.edit-btn {
+  margin-right: 10px;
+}
+.delete-btn {
+  margin-right: -10px;
+}
+
 /* To-do dot styles */
 .todo-dot {
   display: block;
