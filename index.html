@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calendar-nav">
+        <button id="prev-month" class="nav-btn">&lt;</button>
+        <div id="current-month"></div>
+        <button id="next-month" class="nav-btn">&gt;</button>
+      </div>
+      <div id="calendar" class="calendar"></div>
+
+      <div id="selected-date"></div>
+      <div class="todo-list">
+        <h2>Todo List</h2>
+        <div id="date-display"></div>
+        <div id="new-todo-container">
+          <input type="text" id="new-todo-input" placeholder="New Todo" />
+          <button id="add-todo" class="add-todo-btn">Add</button>
+        </div>
+        <ul id="todo-items"></ul>
+      </div>
+    </div>
+    <script src="./js/calendar.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

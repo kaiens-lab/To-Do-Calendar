@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ffb700 10%, #2a2929 90%);
+}
+
+.container {
+  width: 90%;
+  max-width: 350px;
+  background-color: #0f0f0f;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+/* Calendar-nav */
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #b4b2b2;
+}
+
+.nav-btn:hover {
+  color: #ffd000;
+}
+
+#current-month {
+  font-size: 1.2rem;
+  color: #b4b2b2;
+}
+
+/* Week-Header */
+.week-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+/* Calendar Content */
+.calendar {
+  margin-bottom: 20px;
+  color: #b4b2b2;
+}
+
+.calendar-days-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar div,
+.dates-container div {
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.other-month {
+  color: #403f3f;
+}
+
+.calendar .selected {
+  background-color: #feb700;
+  color: #0f0f0f;
+}
+
+/* Date Container */
+.dates-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.dates-container div:hover {
+  background-color: #cbcbcb;
+  color: #0f0f0f;
+}
+
+.dates-container div:hover .todo-dot {
+  background-color: #0f0f0f;
+}
+
+.dates-container div:hover .todo-dot.completed {
+  background-color: #808080;
+}
+
+/* To-do list styles */
+.todo-list {
+  padding-top: 20px;
+  background-color: #feb62c;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.todo-list h2 {
+  margin: 0 0 5px;
+  color: black;
+}
+
+#date-display {
+  margin: 0 0 20px;
+  color: black;
+}
+
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* To-do list item styles */
+.todo-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.todo-list li span {
+  flex-grow: 1;
+  margin-right: 10px;
+  color: black;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #202020;
+}
+
+/* To-do list input styles */
+.todo-list input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+/* To-do list checkbox styles */
+.todo-list input[type="checkbox"] {
+  flex-shrink: 0;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+}
+
+.todo-list input[type="checkbox"]:checked {
+  background-color: black;
+  border: 2px solid black;
+}
+
+.todo-list input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Add new to-do item styles */
+#new-todo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#new-todo-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #202020;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #b4b2b2;
+}
+
+.add-todo-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  width: 50px;
+  height: 35px;
+  padding: 10px;
+  color: #feb700;
+  background-color: #0f0f0f;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+.add-todo-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Button styles */
+#todo-items button,
+.edit-btn,
+.delete-btn {
+  background-color: black;
+  border: none;
+  color: #feb62c;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: none;
+  padding: 5px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* To-do dot styles */
+.todo-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #feb62c;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 2px;
+  z-index: 10;
+  position: relative;
+}
+
+.todo-dot:hover {
+  background-color: #0f0f0f;
+}
+
+.todo-dot.completed {
+  background-color: #cbcbcb;
+}
+
+.calendar .selected .todo-dot {
+  background-color: black;
+}
+
+/* Animation styles */
+@keyframes slideRightAndDisappear {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+.slide-right-disappear {
+  animation: slideRightAndDisappear 0.5s ease-out forwards;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 400px) {
+  .container {
+    width: 300px;
+  }
+
+  .add-todo-btn,
+  .delete-btn {
+    padding: 30px;
+  }
+
+  .todo-list li {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .todo-list input[type="text"] {
+    width: 0;
+    min-width: 0;
+  }
+
+  .todo-list button {
+    padding: 5px;
+    flex-shrink: 0;
+  }
+}
