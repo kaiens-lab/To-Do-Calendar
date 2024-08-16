@@ -10,6 +10,7 @@ created as a self-practice project to enhance front-end development skills.
   - [目錄 / Table of contents](#目錄--table-of-contents)
   - [功能特點 / Features](#功能特點--features)
     - [🔍 概覽 Overview](#-概覽-overview)
+    - [Links](#links)
     - [🔍 技術概覽 / Technical Overview](#-技術概覽--technical-overview)
     - [📝 待辦事項管理 To-Do Management](#-待辦事項管理-to-do-management)
     - [📁 資料儲存 Data Storage](#-資料儲存-data-storage)
@@ -23,6 +24,10 @@ created as a self-practice project to enhance front-end development skills.
 - 此項目使用 RWD 技術優化，於桌面和手機設備上皆可運行，方便隨時隨地管理代辦事項。  
    This project is optimized with RWD (Responsive Web Design) technology,  
    making it usable on both desktop and mobile devices, allowing task management anytime, anywhere.
+
+### Links
+
+- Live Site URL: [To-Do Calendar](https://kaiens-lab.github.io/To-Do-Calendar/)
 
 ---
 
